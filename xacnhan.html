@@ -16,6 +16,9 @@
     <link rel="stylesheet" href="./thiep/xacnhan.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+    <script async src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.css">
     <title>THÀNH - THẮM</title>
 </head>
 <body>
@@ -131,8 +134,9 @@
     </script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-        // Khởi tạo AOS
-        AOS.init();
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init();
+        });
     </script>
 </body>
 </html>
