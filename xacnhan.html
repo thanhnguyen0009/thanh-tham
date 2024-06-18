@@ -26,10 +26,10 @@
     <div class="container">
         <div class="container-wrapper">
             <div class="box-img">
-                <img src="./thiep/anh/pic1-02.webp" alt="" class="img1">
-                <img src="./thiep/anh/pic2-03.webp" alt="" class="img2">
-                <img src="./thiep/anh/pic3-04.webp" alt="" class="img3"data-aos="fade-up">
-                <img src="./thiep/anh/pic4-05.webp" alt="" class="img4" data-aos="zoom-in">
+                <img src="./thiep/anh/pic1-02.webp" alt="" class="img1"  data-animate="zoomIn">
+                <img src="./thiep/anh/pic2-03.webp" alt="" class="img2"  data-animate="zoomIn">
+                <img src="./thiep/anh/pic3-04.webp" alt="" class="img3">
+                <img src="./thiep/anh/pic4-05.webp" alt="" class="img4">
                 <div class="box-center" >
                     <label for="" class="lb-center">TRÂN TRỌNG KÍNH MỜI ANH/CHỊ/BẠN <br>
                         ĐẾN DỰ BỮA TIỆC BÁO HỶ THÂN MẬT CỦA <strong>THÀNH VÀ THẮM</strong></label>
@@ -39,20 +39,20 @@
                     <img src="./thiep/anh/map-02.webp" alt="" class="img-map">
                     <a href="https://maps.app.goo.gl/QaFsD4azMe1mbBEv7" class="map-btn" >MAPS (CLICK HERE)</a>
                 </div>
-                <img src="./thiep/anh/pic6-07.webp" alt="" class="img6"data-aos="fade-right">
+                <img src="./thiep/anh/pic6-07.webp" alt="" class="img6">
                 <div class="box-img7">
                     <img src="./thiep/anh/pic7-08.webp" alt="" class="img7">
                     <img src="./thiep/anh/pic8-09.webp" alt="" class="img8">
                 </div>
-                <img src="./thiep/anh/pic9-10.webp" alt="" class="img9" data-aos="fade-down">
-                <img src="./thiep/anh/pic10-11.webp" alt="" class="img10"data-aos="fade-up">
+                <img src="./thiep/anh/pic9-10.webp" alt="" class="img9" >
+                <img src="./thiep/anh/pic10-11.webp" alt="" class="img10">
             </div>
             <div class="love-story">
-                <img src="./thiep/anh/ls-02.webp" alt="" class="img-ls1" data-aos="fade-down">
-                <img src="./thiep/anh/cnt1-03.webp" alt="" class="img-ls2" data-aos="fade-right">
-                <img src="./thiep/anh/cnr2-04.webp" alt="" class="img-ls3" data-aos="fade-left">
+                <img src="./thiep/anh/ls-02.webp" alt="" class="img-ls1" >
+                <img src="./thiep/anh/cnt1-03.webp" alt="" class="img-ls2">
+                <img src="./thiep/anh/cnr2-04.webp" alt="" class="img-ls3">
             </div>
-            <div class="box-form" data-aos="zoom-in">
+            <div class="box-form" >
                 <img src="./thiep/anh/pic11-12.webp" alt="" class="img-form">
                 <form action="" name="demo">
                     <div class="feed-info">
@@ -82,13 +82,13 @@
                 </form>
             </div>
             <div class="box-content">
-                <p class="content" data-aos="fade-right">Tiệc Báo Hỷ của chúng con/chúng mình sẽ diễn ra thật vui và trọn vẹn hơn
+                <p class="content">Tiệc Báo Hỷ của chúng con/chúng mình sẽ diễn ra thật vui và trọn vẹn hơn
                      khi có sự hiện diện của toàn thể họ hàng hai bên, người thân và bạn bè. 
                      Rất mong chờ sự hiện diện của cô chú và anh chị vào ngày 29.06.2024 
                      tại nhà hàng Văn Hoa , 68-76 Tản Đà.</p>
-                <img src="./thiep/anh/pic12-13.webp" alt="" class="img11" data-aos="fade-left">
+                <img src="./thiep/anh/pic12-13.webp" alt="" class="img11">
             </div>
-            <div class="box-end" data-aos="fade-up">
+            <div class="box-end">
                 <img src="./thiep/anh/pic13-14.webp" alt="" class="img-end" >
             </div>
         </div>
@@ -134,8 +134,22 @@
     </script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            AOS.init();
+        $(window).on('load scroll', function(){
+
+        var elem = $('.animated');
+
+        elem.each(function () {
+
+        var isAnimate = $(this).data('animate');
+        var elemOffset = $(this).offset().top;
+        var scrollPos = $(window).scrollTop();
+        var wh = $(window).height();
+
+        if(scrollPos > elemOffset - wh + (wh / 2)){
+            $(this).addClass(isAnimate);
+        }
+        });
+
         });
     </script>
 </body>
