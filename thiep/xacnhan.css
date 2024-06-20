@@ -442,10 +442,11 @@
 .content{
   text-align: justify;
   font-family: 'SVN-Gotham';
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 300;
   margin-left: 20px;
   font-style: italic;
+  line-height: 20px;
 }
 
 .box-end{
@@ -683,7 +684,7 @@ textarea{
 }
 
 
-
+/* ================================ */
 
 @media (max-width: 480px){
   .container {
