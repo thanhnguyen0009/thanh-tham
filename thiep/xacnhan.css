@@ -322,7 +322,7 @@
   padding: 50px;
 }
 .img4{
-  width: 35%;
+  width: 20%;
   margin-top: 50px;
 }
 .img5{
@@ -368,6 +368,22 @@
   border-radius: 20px;
 
 }
+
+.love-story{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.img-lovestory{
+  width: 100%;
+  padding: 20px;
+}
+.img-lovestory1{
+  width: 40%;
+}
+
 
 .box-center{
   display: flex;
@@ -616,6 +632,55 @@ textarea{
 }
 
 
+/* SLIDER */
+.slider {
+  width: 100%;
+  max-width: 800px;
+  height: 550px;
+  position: relative;
+  overflow: hidden; /* <===  */
+  border-radius: 15px;
+  margin-top: 50px;
+}
+
+.slide {
+  width: 100%;
+  max-width: 800px;
+  height: 350px;
+  position: absolute;
+  transition: all 0.5s;
+}
+
+.slide img {
+  width: 100%;
+  height: 700px;
+  object-fit: cover;
+}
+
+.btn {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  border: none;
+  border-radius: 50%;
+  z-index: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  font-size: 18px;
+}
+.btn:active {
+  transform: scale(1.1);
+}
+.btn-prev {
+  top: 45%;
+  left: 2%;
+}
+
+.btn-next {
+  top: 45%;
+  right: 2%;
+}
 
 
 
